@@ -2,7 +2,7 @@ env:
   repo:            "https://github.com/farrukh90/nodejs"
   app_version:     "2.0.0"
   repo_region:     "us-central1"
-  project_id:      "${{ secrets.PROJECT_ID }}"
+  project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
   app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
   # enable_sonar: ture
@@ -44,12 +44,12 @@ jobs:
         # if ${{ env.enable_sonar}} == "true"
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: b705168cacc13b41fd861bb8bb0674e070725dda #${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: b705168cacc13b41fd861bb8bb0674e070725dda #${{ secrets.SONAR_TOKEN }}  # Add Sonar Token to Actions secret
           GITHUB_TOKEN: sonarcloud.io  #${{ secrets.SONAR_TOKEN }}  #SONAR_HOST_URL: sonarcloud.io 
         with:
           projectBaseDir: .
-          args: >
-            -Dsonar.organization=team2nodejs
+          args: >  #Change organization name and projectKey
+            -Dsonar.organization=team2nodejs  
             -Dsonar.projectKey=team2nodejs_nodejs
             -Dsonar.sources=./
             
@@ -97,7 +97,7 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: '${{ secrets.SERVICE_ACCOUNT }}'
+          credentials_json: '${{ secrets.SERVICE_ACCOUNT }}'  #create new service account and save 
 
 
       - name: Authenticate to repository
