@@ -50,7 +50,7 @@ jobs:
           projectBaseDir: .
           args: >
             -Dsonar.organization=team2nodejs
-            -Dsonar.projectKey=nodejs
+            -Dsonar.projectKey=team2nodejs_nodejs
             -Dsonar.sources=./
             
 
