@@ -2,7 +2,7 @@ env:
   repo:            "https://github.com/farrukh90/nodejs"
   app_version:     "2.0.0"
   repo_region:     "us-central1"
-  project_id:      "${{ secrets.PROJECT_ID }}"
+  project_id:      "cool-kit-377021" #"${{ secrets.PROJECT_ID }}"
   app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
   # enable_sonar: ture
