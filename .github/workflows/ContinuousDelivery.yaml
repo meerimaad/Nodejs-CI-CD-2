@@ -85,7 +85,7 @@ jobs:
       - name: Tag Image
         working-directory: ${{ env.app_name }}
         run: |
-          docker image tag ${{ env.app_name }}:${{ env.app_version }} ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.app_name }}/${{ env.app_name }}:${{ env.tag_new_version }}     
+          docker image tag ${{ env.app_name }}:${{ env.app_version }} ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.registry_name }}/${{ env.app_name }}:${{ env.tag_new_version }}     
 
 
       # Runs a single command using the runners shell
