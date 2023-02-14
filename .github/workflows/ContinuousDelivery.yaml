@@ -49,8 +49,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >  #Change organization name and projectKey
-            -Dsonar.organization=team2nodejs  
-            -Dsonar.projectKey=team2nodejs_nodejs
+            -Dsonar.organization=team2 
+            -Dsonar.projectKey=team2nodjs1
             -Dsonar.sources=./
             
 
