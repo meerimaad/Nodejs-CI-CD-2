@@ -55,20 +55,20 @@ jobs:
             
 
       # Runs a set of commands using the runners shell
-      - name: Switch Branches
-        working-directory: ${{ env.app_name }}
-        run: |
-          git checkout ${{ env.app_version }}
-          ls -l
+      # - name: Switch Branches
+      #   working-directory: ${{ env.app_name }}
+      #   run: |
+      #     git checkout ${{ env.app_version }}
+      #     ls -l
 
 
 
-      # Runs a set of commands using the runners shell
-      - name: Remove Old Images
-        working-directory: ${{ env.app_name }}
-        run: |
-          echo "hello"
-          # docker image prune -af
+      # # Runs a set of commands using the runners shell
+      # - name: Remove Old Images
+      #   working-directory: ${{ env.app_name }}
+      #   run: |
+      #     echo "hello"
+      #     # docker image prune -af
 
 
 
