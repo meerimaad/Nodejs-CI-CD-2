@@ -1,6 +1,6 @@
 env:
   repo:            "https://github.com/farrukh90/nodejs"
-  app_version:     "2.0.0"
+  app_version:     "3.0.0"
   repo_region:     "us-central1"
   project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
   app_name:        "nodejs"
