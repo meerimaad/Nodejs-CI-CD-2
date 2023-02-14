@@ -11,7 +11,7 @@ env:
   environment:        "dev"
   
 name: ContinuousDeployment
-on:
+ on:
   workflow_run:
     workflows: ["ContinuousDelivery"]
     types:
