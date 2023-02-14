@@ -3,8 +3,9 @@ env:
   app_version:     "2.0.0"
   repo_region:     "us-central1"
   project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
-  app_name:        "project-repo"
+  app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
+  registry_name:  "project-repo"
   # enable_sonar: ture
 
 
@@ -54,21 +55,21 @@ jobs:
             -Dsonar.sources=./
             
 
+      Runs a set of commands using the runners shell
+      - name: Switch Branches
+        working-directory: ${{ env.app_name }}
+        run: |
+          git checkout ${{ env.app_version }}
+          ls -l
+
+
+
       # Runs a set of commands using the runners shell
-      # - name: Switch Branches
-      #   working-directory: ${{ env.app_name }}
-      #   run: |
-      #     git checkout ${{ env.app_version }}
-      #     ls -l
-
-
-
-      # # Runs a set of commands using the runners shell
-      # - name: Remove Old Images
-      #   working-directory: ${{ env.app_name }}
-      #   run: |
-      #     echo "hello"
-      #     # docker image prune -af
+      - name: Remove Old Images
+        working-directory: ${{ env.app_name }}
+        run: |
+          echo "hello"
+          # docker image prune -af
 
 
 
@@ -111,4 +112,4 @@ jobs:
       - name: Image push
         working-directory: ${{ env.app_name }}
         run: |
-          docker push ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.app_name }}/${{ env.app_name }}:${{ env.tag_new_version }}
+          docker push ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.registry_name }}/${{ env.app_name }}:${{ env.tag_new_version }}
