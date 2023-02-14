@@ -44,13 +44,13 @@ jobs:
         # if ${{ env.enable_sonar}} == "true"
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: b705168cacc13b41fd861bb8bb0674e070725dda #${{ secrets.SONAR_TOKEN }}  # Add Sonar Token to Actions secret
+          SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}  # Add Sonar Token to Actions secret
           GITHUB_TOKEN: sonarcloud.io  #${{ secrets.SONAR_TOKEN }}  #SONAR_HOST_URL: sonarcloud.io 
         with:
           projectBaseDir: .
           args: >  #Change organization name and projectKey
-            -Dsonar.organization=team2 
-            -Dsonar.projectKey=team2nodjs1
+            -Dsonar.organization=team2nodjs1 
+            -Dsonar.projectKey=team2nodjs1_team2
             -Dsonar.sources=./
             
 
