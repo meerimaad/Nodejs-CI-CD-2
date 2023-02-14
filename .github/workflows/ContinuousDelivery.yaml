@@ -55,7 +55,7 @@ jobs:
             -Dsonar.sources=./
             
 
-      Runs a set of commands using the runners shell
+     # Runs a set of commands using the runners shell
       - name: Switch Branches
         working-directory: ${{ env.app_name }}
         run: |
