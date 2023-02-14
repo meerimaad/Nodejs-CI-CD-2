@@ -3,7 +3,7 @@ env:
   app_version:     "2.0.0"
   repo_region:     "us-central1"
   project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
-  app_name:        "nodejs"
+  app_name:        "project-repo"
   tag_new_version: ${GITHUB_SHA}
   # enable_sonar: ture
 
