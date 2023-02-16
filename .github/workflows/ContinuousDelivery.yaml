@@ -6,7 +6,7 @@ env:
   app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
   registry_name:  "project-repo"
-  # enable_sonar: ture
+  enable_sonar: true
 
 
 # This is a basic workflow to help you get started with Actions
@@ -42,7 +42,7 @@ jobs:
           git clone ${{ env.repo }}  
 
       - name: SonarCloud Scan
-        # if ${{ env.enable_sonar}} == "true"
+        if: ${{ env.enable_sonar}} == "true"
         uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN:  ${{ secrets.SONAR_TOKEN }}  # Add Sonar Token to Actions secret
