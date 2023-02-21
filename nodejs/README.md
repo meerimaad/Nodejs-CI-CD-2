@@ -16,6 +16,8 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "2.0.0"
+  #change port 
+  port: 8080
 ```
 
 #### Deploy application 
