@@ -38,6 +38,9 @@ BUCKET_NAME        = "terraform-project-WHATEVER_YOU_WANT"
 
 # Add project name you created above
 PROJECT_ID         = "terraform-project-WHATEVER_YOU_WANT"   # Keep in mind, ID not the name
+
+# Add service  name you created above
+service_name      = "" 
 ```
 ----
 ### Step4
