@@ -40,7 +40,7 @@ BUCKET_NAME        = "terraform-project-WHATEVER_YOU_WANT"
 PROJECT_ID         = "terraform-project-WHATEVER_YOU_WANT"   # Keep in mind, ID not the name
 
 # Add service  name you created above
-service_name      = "" 
+service_name      = "your-service-name"  #on this repo it creates service "nodejs-app"
 ```
 ----
 ### Step4
