@@ -39,7 +39,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Clone a repo
         run: |
-          rm -rf .git && git clone ${{ env.repo }}  
+          rm -rf nodejs && git clone ${{ env.repo }}  
 
       - name: SonarCloud Scan
         if: ${{ env.enable_sonar}} == "true"
