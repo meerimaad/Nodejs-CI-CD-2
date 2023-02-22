@@ -6,6 +6,8 @@ env:
   app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
   registry_name:  "project-repo"
+  sonar_organization: "team2nodjs1"
+  sonar_projectkey: "team2nodjs1_team2"
   enable_sonar: true
 
 
@@ -50,8 +52,8 @@ jobs:
         with:
           projectBaseDir: .
           args: >  #Change organization name and projectKey
-            -Dsonar.organization=team2nodjs1 
-            -Dsonar.projectKey=team2nodjs1_team2
+            -Dsonar.organization=${{ env.sonar_organization }} 
+            -Dsonar.projectKey=${{ env.sonar_projectkey }}
             -Dsonar.sources=./
             
 
