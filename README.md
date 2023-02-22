@@ -43,6 +43,7 @@ SONAR_TOKEN: Token generated in sonarcloud account.
 
 ## Continuous Delivery Workflow
 #
+
 <br>
 
 This GitHub Actions workflow provides continuous delivery for a Node.js application. It will build a Docker image, tag it with the current Git SHA, and push it to Google Cloud's Container Registry.
