@@ -70,7 +70,7 @@ sonar_projectKey: The project key for your SonarQube instance.
 <br>
 
 ## Workflow Description
-#
+
 
 <br>
 
@@ -95,7 +95,7 @@ The workflow is triggered by a push event to the master branch of the repository
 
 
 ## Continuous Deployment Workflow
-#
+
 This workflow uses Github Actions to deploy a NodeJS application to Google Kubernetes Engine (GKE) and uses Terraform for infrastructure management.
 
 
@@ -122,7 +122,7 @@ This workflow uses Github Actions to deploy a NodeJS application to Google Kuber
 <br>
 
 ## Workflow Triggers
-#
+
 This workflow runs when the ContinuousDelivery workflow is completed or manually triggered using the Actions tab.
 
 
@@ -142,5 +142,5 @@ This workflow runs when the ContinuousDelivery workflow is completed or manually
 <br>
 
 ## Conclusion
-#
+
 This workflow automates the deployment of a NodeJS application to GKE using Terraform. With the appropriate environment variables set up, the workflow is easy to use and saves time in the deployment process.
