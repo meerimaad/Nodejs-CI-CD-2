@@ -1,7 +1,7 @@
 
 ![CI/CD GIF](https://user-images.githubusercontent.com/104270411/220518314-9f12ef08-eec3-465b-9a15-4ec123228034.gif)
 
-# NodeJs Project Pipeline Setup
+# Nodejs Project Pipeline Setup
 
 
 This project enables you to deploy your web application without manual intervention, making it easier and faster to get your application up and running.
