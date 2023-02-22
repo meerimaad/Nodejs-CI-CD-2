@@ -7,7 +7,7 @@
 This project enables you to deploy your web application without manual intervention, making it easier and faster to get your application up and running.
 
 ### Prerequisites:
-#
+
 
 
 * An active Google Cloud account
@@ -17,7 +17,7 @@ This project enables you to deploy your web application without manual intervent
 
 
 ### Setting up the Pipeline:
-#
+
 
 
 
