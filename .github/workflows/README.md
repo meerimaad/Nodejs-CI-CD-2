@@ -1,13 +1,13 @@
 
 ![CI/CD GIF](https://user-images.githubusercontent.com/104270411/220518314-9f12ef08-eec3-465b-9a15-4ec123228034.gif)
 
-# NodeJs Project Pipeline Setup
+# Nodejs Project Pipeline Setup
 
 
 This project enables you to deploy your web application without manual intervention, making it easier and faster to get your application up and running.
 
 ### Prerequisites:
-#
+
 
 
 * An active Google Cloud account
@@ -17,7 +17,7 @@ This project enables you to deploy your web application without manual intervent
 
 
 ### Setting up the Pipeline:
-#
+
 
 
 
@@ -27,11 +27,11 @@ Service Account User (basic owner)
 ```
 * Generate a new key for the service account and download it as a JSON file.
 
-<br>
 
-* To use this workflow, the following secrets must be added to the repository:
 
-<br>
+* To use this workflow, following secrets must be added to the repository:
+
+
 
 ```
 PROJECT_ID: the ID of the Google Cloud project where the Container Registry is located.
@@ -42,8 +42,9 @@ SONAR_TOKEN: Token generated in sonarcloud account.
 <br>
 
 ## Continuous Delivery Workflow
-#
-<br>
+
+
+
 
 This GitHub Actions workflow provides continuous delivery for a Node.js application. It will build a Docker image, tag it with the current Git SHA, and push it to Google Cloud's Container Registry.
 
@@ -69,7 +70,7 @@ sonar_projectKey: The project key for your SonarQube instance.
 <br>
 
 ## Workflow Description
-#
+
 
 <br>
 
@@ -94,7 +95,7 @@ The workflow is triggered by a push event to the master branch of the repository
 
 
 ## Continuous Deployment Workflow
-#
+
 This workflow uses Github Actions to deploy a NodeJS application to Google Kubernetes Engine (GKE) and uses Terraform for infrastructure management.
 
 
@@ -121,7 +122,7 @@ This workflow uses Github Actions to deploy a NodeJS application to Google Kuber
 <br>
 
 ## Workflow Triggers
-#
+
 This workflow runs when the ContinuousDelivery workflow is completed or manually triggered using the Actions tab.
 
 
@@ -141,5 +142,5 @@ This workflow runs when the ContinuousDelivery workflow is completed or manually
 <br>
 
 ## Conclusion
-#
+
 This workflow automates the deployment of a NodeJS application to GKE using Terraform. With the appropriate environment variables set up, the workflow is easy to use and saves time in the deployment process.
