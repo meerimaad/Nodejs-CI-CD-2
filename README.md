@@ -29,7 +29,7 @@ Service Account User (basic owner)
 
 <br>
 
-* To use this workflow, the following secrets must be added to the repository:
+* To use this workflow, following secrets must be added to the repository:
 
 <br>
 
