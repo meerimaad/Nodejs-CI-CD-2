@@ -1,3 +1,6 @@
+
+![CI/CD GIF](https://user-images.githubusercontent.com/104270411/220518314-9f12ef08-eec3-465b-9a15-4ec123228034.gif)
+
 # NodeJs Project Pipeline Setup
 
 
@@ -9,7 +12,7 @@ This project enables you to deploy your web application without manual intervent
 
 * An active Google Cloud account
 * SonarQube account 
-* GKE Cluster
+* Pre-Configured GKE Cluster
 
 
 
@@ -18,7 +21,7 @@ This project enables you to deploy your web application without manual intervent
 
 
 
-* Create a new service account with the following IAM roles:
+* Create a new service account in GCP with the following IAM roles:
 ```
 Service Account User (basic owner)
 ```
@@ -26,17 +29,26 @@ Service Account User (basic owner)
 
 <br>
 
-* Following repository secrets are needed to be added to GitHub repository:
+* To use this workflow, the following secrets must be added to the repository:
 
 <br>
 
 ```
-PROJECT_ID: The ID of your GCP project
+PROJECT_ID: the ID of the Google Cloud project where the Container Registry is located.
 GOOGLE_DOMAIN_NAME: Your domain name
-SERVICE_ACCOUNT: The JSON key file for the service account created in above.
+SERVICE_ACCOUNT: The JSON key file for the service account created above.
 SONAR_TOKEN: Token generated in sonarcloud account.
 ```
 <br>
+
+## Continuous Delivery Workflow
+#
+<br>
+
+This GitHub Actions workflow provides continuous delivery for a Node.js application. It will build a Docker image, tag it with the current Git SHA, and push it to Google Cloud's Container Registry.
+
+<br>
+
 
 * Modify the following environment variables in `.github/workflows/ContinuousDelivery.yaml` file.
 
@@ -53,6 +65,30 @@ enable_sonar: true if sonarqube will be used to scan images.
 sonar_organization: The organization ID for your SonarQube instance.
 sonar_projectKey: The project key for your SonarQube instance.
 ```
+
+<br>
+
+## Workflow Description
+#
+
+<br>
+
+The workflow is triggered by a push event to the master branch of the repository. It consists of a single job, `image-build`. The job runs on an Ubuntu virtual machine and performs the following steps:
+
+<br>
+
+* Checks out the repository code using the `actions/checkout` action.
+* Clones the repository to a local directory using the `git clone` command.
+* Runs a SonarCloud scan on the codebase (optional).
+* Switches to the branch specified by `app_version` using the `git checkout` command.
+* Removes any old Docker images.
+* Builds a new Docker image using the `docker build` command.
+* Tags the Docker image with the current Git SHA using the `docker image tag` command.
+* Verifies that the gcloud CLI is installed.
+* Authenticates to Google Cloud using a service account.
+* Configures Docker to authenticate to the Container Registry using the `gcloud auth configure-docker` command.
+* Pushes the Docker image to the Container Registry using the `docker push` command.
+
 <br>
 <br>
 
@@ -105,4 +141,5 @@ This workflow runs when the ContinuousDelivery workflow is completed or manually
 <br>
 
 ## Conclusion
+#
 This workflow automates the deployment of a NodeJS application to GKE using Terraform. With the appropriate environment variables set up, the workflow is easy to use and saves time in the deployment process.
