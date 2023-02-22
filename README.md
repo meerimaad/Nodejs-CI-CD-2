@@ -27,11 +27,11 @@ Service Account User (basic owner)
 ```
 * Generate a new key for the service account and download it as a JSON file.
 
-<br>
+
 
 * To use this workflow, following secrets must be added to the repository:
 
-<br>
+
 
 ```
 PROJECT_ID: the ID of the Google Cloud project where the Container Registry is located.
@@ -42,7 +42,7 @@ SONAR_TOKEN: Token generated in sonarcloud account.
 <br>
 
 ## Continuous Delivery Workflow
-#
+
 
 <br>
 
