@@ -65,7 +65,7 @@ app_name: "Name of your application."
 tag_new_version: ${GITHUB_SHA})
 registry_name: "Name of your GCP artifact registry."
 enable_sonar: "Set to 'true' if sonarqube will be used to scan images."
-sonar_organization: "organization ID for your SonarQube instance."
+sonar_organization: "Organization ID for your SonarQube instance."
 sonar_projectKey: "Project key for your SonarQube instance."
 ```
 
