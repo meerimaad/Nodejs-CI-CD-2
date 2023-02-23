@@ -75,7 +75,7 @@ nodejs-config = {
 
 ```
 
-### Step4
+### Step5
 #
 ### under `0.account_setup` folder:
 
