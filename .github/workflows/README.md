@@ -57,16 +57,16 @@ This GitHub Actions workflow provides continuous delivery for a Node.js applicat
 <br>
 
 ```
-repo: "The URL of the nodejs application repository."
-app_version: "The version of the application to deploy."
-repo_region: "The GCP region."
-project_id: "The ID of your GCP project."
-app_name: "The name of your application."
+repo: "URL of the nodejs application repository."
+app_version: "Version of the application to deploy."
+repo_region: "GCP region."
+project_id: "ID of your GCP project."
+app_name: "Name of your application."
 tag_new_version: ${GITHUB_SHA})
-registry_name: "The name of your GCP artifact registry."
+registry_name: "Name of your GCP artifact registry."
 enable_sonar: "Set to 'true' if sonarqube will be used to scan images."
-sonar_organization: "The organization ID for your SonarQube instance."
-sonar_projectKey: "The project key for your SonarQube instance."
+sonar_organization: "organization ID for your SonarQube instance."
+sonar_projectKey: "Project key for your SonarQube instance."
 ```
 
 <br>
@@ -109,16 +109,16 @@ This workflow uses Github Actions to deploy a NodeJS application to Google Kuber
 
 ```
 
-* region: "The region where GKE cluster is located."
-* app_name: "The name of the application."
-* app_version: "The version of the application, taken from Github SHA. '${GITHUB_SHA}'."
-* app_port: "The port on which the application listens."
-* project_id: "The ID of the Google Cloud project where the application will be deployed. "us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/project-repo/nodejs""
-* repository: "The location of the Google Artifact repository."
-* cluster_name: "The name of the GKE cluster."
-* helm_repository: "The location of the custom Helm chart."
-* google_domain_name: "The domain name used for the application. as secret: ${{ secrets.GOOGLE_DOMAIN_NAME }}""
-* environment: "The environment where the application will be deployed."
+* region: "Region where GKE cluster is located."
+* app_name: "Name of the application."
+* app_version: "Version of the application, taken from Github SHA. '${GITHUB_SHA}'."
+* app_port: "Port on which the application listens."
+* project_id: "ID of the Google Cloud project where the application will be deployed. "us-central1-docker.pkg.dev/${{ secrets.PROJECT_ID }}/project-repo/nodejs""
+* repository: "Location of the Google Artifact repository."
+* cluster_name: "Name of the GKE cluster."
+* helm_repository: "Location of the custom Helm chart."
+* google_domain_name: "Domain name used for the application. as secret: ${{ secrets.GOOGLE_DOMAIN_NAME }}""
+* environment: "Environment where the application will be deployed."
 ```
 
 <br>
