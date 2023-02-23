@@ -35,7 +35,7 @@ terraform-project-WHATEVER_YOU_WANT
 
 ### Step3
 #
-#### Create a new file `tfvars` file under `0.account_setup` folder:
+#### Create a `tfvars` file under `0.account_setup` folder:
 ```
 0.account_setup/configurations.tfvars
 ```
