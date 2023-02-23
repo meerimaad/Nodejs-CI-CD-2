@@ -11,6 +11,7 @@ This project enables you to deploy your web application without manual intervent
 
 
 * An active Google Cloud account
+* Pre-created Google Artifact Registry
 * SonarQube account 
 * Pre-Configured GKE Cluster
 
