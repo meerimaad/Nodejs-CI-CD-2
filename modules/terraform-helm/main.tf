@@ -12,3 +12,4 @@ resource "helm_release" "grafana" {
   chart      = var.chart
   wait       = false
 }
+

@@ -66,11 +66,11 @@ nodejs-config = {
 
     tag = The version of the Node.js application to deploy.
 
-    deployment_name = The name of the Kubernetes deployment that will be created.
+    deployment_name = The name of the Kubernetes deployment that will be created. ex: nodejs-app
 
     image-repository =  GCP artifact repository ex: "us-central1-docker.pkg.dev/terraform-project-alpkocer/team2-nodejs/nodejs"  
 
-    host =  ingress host URL for the accessing the application.
+    host =  ingress host URL for the accessing the application. Please make sure it starts with deployment_name for accurate uptime check. ex: "nodejs-app.google_domain_name"
 }
 
 ```

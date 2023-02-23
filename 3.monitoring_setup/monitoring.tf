@@ -15,5 +15,5 @@ module "nodejs" {
   source             = "../modules/monitoring"
   google_domain_name = var.google_domain_name
   PROJECT_ID         = var.PROJECT_ID
-  service_name       = "nodejs" #var.prometheus-config["deployment_name"]
+  service_name       = "${var.nodejs-config["deployment_name"]}"
 }
