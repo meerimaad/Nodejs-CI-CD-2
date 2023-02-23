@@ -5,7 +5,7 @@ env:
   project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
   app_name:        "nodejs"
   tag_new_version: ${GITHUB_SHA}
-  registry_name:  "project-repo"
+  registry_name:  "team2-nodejs"
   sonar_organization: "team2nodjs1"
   sonar_projectkey: "team2nodjs1_team2"
   enable_sonar: true
