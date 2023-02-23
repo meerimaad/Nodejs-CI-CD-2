@@ -60,13 +60,13 @@ PROJECT_ID         = "terraform-project-WHATEVER_YOU_WANT"
 
 
 nodejs-config = {
-    repository_id = The ID of the repository where the Node.js app will be stored.
+    repository_id = The ID of the repository where the Node.js app will be stored. ex: "team2-nodejs"
 
-    namespace_name = The name of the Kubernetes namespace where the Node.js deployment will be created
+    namespace_name = The name of the Kubernetes namespace where the Node.js deployment will be created ex: "team2-nodejs"
 
-    tag = The version of the Node.js application to deploy.
+    tag = The version of the Node.js application to deploy. ex: "2.0.0"
 
-    deployment_name = The name of the Kubernetes deployment that will be created. ex: nodejs-app
+    deployment_name = The name of the Kubernetes deployment that will be created. ex: "nodejs-app"
 
     image-repository =  GCP artifact repository ex: "us-central1-docker.pkg.dev/terraform-project-alpkocer/team2-nodejs/nodejs"  
 
