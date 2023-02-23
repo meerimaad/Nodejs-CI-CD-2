@@ -1,5 +1,5 @@
 
-# Nodejs Project on Terraform
+# Nodejs Application Project
 
 
 This repository contains Terraform code for deploying a Node.js application.
