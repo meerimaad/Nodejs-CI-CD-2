@@ -13,3 +13,7 @@ variable "gke_config" {
   }
 }
 
+
+variable nodejs-config {
+  type = map
+}
