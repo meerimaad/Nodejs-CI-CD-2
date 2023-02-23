@@ -1,6 +1,6 @@
 env:
   repo:            "https://github.com/farrukh90/nodejs"
-  app_version:     "3.0.0"
+  app_version:     "1.0.0"
   repo_region:     "us-central1"
   project_id:      "${{ secrets.PROJECT_ID }}"  # Add Project ID to Actions secrets
   app_name:        "nodejs"
@@ -87,7 +87,13 @@ jobs:
       - name: Tag Image
         working-directory: ${{ env.app_name }}
         run: |
-          docker image tag ${{ env.app_name }}:${{ env.app_version }} ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.registry_name }}/${{ env.app_name }}:${{ env.tag_new_version }}     
+          docker image tag docker image tag ${{ env.app_name }}:${{ env.app_version }} ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.registry_name }}/${{ env.app_name }}:${{ env.app_version }}
+
+
+      # - name: Tag Image
+      #   working-directory: ${{ env.app_name }}
+      #   run: |
+      #     docker image tag ${{ env.app_name }}:${{ env.app_version }} ${{ env.repo_region }}-docker.pkg.dev/${{ env.project_id }}/${{ env.registry_name }}/${{ env.app_name }}:${{ env.tag_new_version }}     
 
 
       # Runs a single command using the runners shell
