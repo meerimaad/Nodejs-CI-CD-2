@@ -91,7 +91,7 @@ bash login.sh
 
 Terraform resources will be created using a simple script and makefile.
 
-* Run `build.sh` under same directory where makefile is located.
+* Run the scripts under same directory where makefile is located.
 
 ### To build:
 
