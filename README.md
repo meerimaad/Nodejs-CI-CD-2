@@ -70,7 +70,7 @@ nodejs-config = {
 
     image-repository =  GCP artifact repository ex: "us-central1-docker.pkg.dev/terraform-project-alpkocer/team2-nodejs/nodejs"  
 
-    host =  ingress host URL for accessing the application. Please make sure it starts with deployment_name for accurate uptime check. ex: "nodejs-app.google_domain_name"
+    host =  ingress host URL for accessing the application. Please make sure it starts with deployment_name for accurate uptime check. ex: "nodejs-app.your_google_domain_name"
 }
 
 ```
